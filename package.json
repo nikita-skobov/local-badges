@@ -4,7 +4,8 @@
   "description": "a tool that generates badges locally from a customizable configuration file",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "badges": "node bin/local-badges.js --coverage-path coverage/clover.xml --build-status SUCCESS"
   },
   "repository": {
     "type": "git",
