@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test-CI": "jest --coverage --collectCoverageFrom=lib/**/*.js --collectCoverageFrom=bin/**/*.js",
     "badges": "node bin/local-badges.js --coverage-path coverage/clover.xml --build-status SUCCESS"
   },
   "repository": {
