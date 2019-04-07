@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="88" height="20">
+  <g shape-rendering="crispEdges">
+    <rect width="45" height="20" fill="#555"/>
+    <rect x="45" width="43" height="20" fill="#97ca00"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110">
+    
+    
+        <text x="235" y="140" transform="scale(0.1)" textLength="350" lengthAdjust="spacing">boring</text>
+    
+    <text x="655" y="140" transform="scale(0.1)" textLength="330" lengthAdjust="spacing">badge</text>
+  </g>
+  
+  
+</svg>
