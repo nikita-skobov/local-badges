@@ -15,7 +15,7 @@ pipeline {
   post {
     always {
       echo "Pipeline result: ${currentBuild.result}"
-      sh "npm run badges --coverage-path coverage/clover.xml --build-status ${currentBuild.result}"
+      sh "npm run badges -- --coverage-path coverage/clover.xml --build-status ${currentBuild.result}"
     }
     success {
       echo 'Nice!!!'

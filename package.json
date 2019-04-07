@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "test-CI": "jest --coverage --collectCoverageFrom=lib/**/*.js --collectCoverageFrom=bin/**/*.js",
-    "badges": "node bin/local-badges.js --coverage-path coverage/clover.xml --build-status SUCCESS"
+    "badges-test": "node bin/local-badges.js --coverage-path coverage/clover.xml --build-status $curr_build_status",
+    "badges": "node bin/local-badges.js"
   },
   "repository": {
     "type": "git",
