@@ -4,7 +4,7 @@ module.exports = {
   badges: [
     {
       name,
-      folder: './',
+      folder: './badges/',
       fn: () => ({
         colorB: 'purple',
         template: 'plastic',
