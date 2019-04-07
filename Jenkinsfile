@@ -1,10 +1,6 @@
 pipeline {
   agent any
 
-  environment {
-    BUILD_RES = "${currentBuild.result}"
-  }
-
   stages {
     stage('Test') {
       steps {
@@ -18,10 +14,8 @@ pipeline {
 
   post {
     always {
-      echo "${BUILD_RES}"
-      echo "current pipeline result: ${currentBuild.currentResult}"
       echo "Pipeline result: ${currentBuild.result}"
-      sh 'npm run badges --coverage-path coverage/clover.xml --build-status "${currentBuild.currentResult}"'
+      sh "npm run badges --coverage-path coverage/clover.xml --build-status ${currentBuild.result}"
     }
     success {
       echo 'Nice!!!'
