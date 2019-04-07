@@ -5,12 +5,10 @@ module.exports = {
     {
       name,
       folder: './',
-      fn: () => {
-        return {
-          colorB: 'purple',
-          template: 'plastic',
-        }
-      },
+      fn: () => ({
+        colorB: 'purple',
+        template: 'plastic',
+      }),
     },
   ],
   defaults: {
