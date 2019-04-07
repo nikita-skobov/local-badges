@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "a tool that generates badges locally from a customizable configuration file",
   "main": "index.js",
+  "bin": {
+    "local-badges": "./bin/local-badges.js"
+  },
   "scripts": {
     "test": "jest",
     "test-CI": "jest --coverage --collectCoverageFrom=lib/**/*.js --collectCoverageFrom=bin/**/*.js",
