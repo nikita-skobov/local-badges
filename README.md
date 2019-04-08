@@ -11,7 +11,7 @@ A tool that generates badges locally from a customizable configuration file.
 * [Examples](#example)
 * [Valid badge styles](#valid-templates)
 * [Available badges](#available-badges)
-* [Contributing](#CONTRIBUTING.md)
+* [Contributing](CONTRIBUTING.md)
 
 ## How it works
 
