@@ -4,6 +4,14 @@
 
 A tool that generates badges locally from a customizable configuration file.
 
+## Table Of Contents
+
+* [How it works](#how-it-works)
+* [Getting Started](#getting-started)
+* [Examples](#example)
+* [Valid badge styles](#valid-templates)
+* [Available badges](#available-badges)
+
 ## How it works
 
 local-badges is intended to be used as a CLI tool. Local-badges takes a javascript module which should be an object with a list of badges. it loops through your list of badges and generates a badge object according to your specifications. Then it uses the [gh-badges](https://www.npmjs.com/package/gh-badges) package to generate the badge svg, and saves the badge according to the name, and folder properties in your badge object.

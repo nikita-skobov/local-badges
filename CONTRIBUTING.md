@@ -2,7 +2,7 @@
 
 Thank you for considering contributing to local-badges.
 
-The following document should outline the process of contributing to this project, whether you are adding features, filing bug reports, or improving documentation.
+The following document should outline the process of contributing to this project. Whether you are adding features, filing bug reports, or improving documentation, all relevant information should be contained below. If you believe there are errors in this document please follow the improving documentation section below.
 
 How you can contribute:
   * [Reporting Bugs](#reporting-bugs)
@@ -16,7 +16,7 @@ How you can contribute:
 
 If you have found a bug to report, first check if the issue [has already been reported](https://github.com/nikita-skobov/local-badges/issues)
 
-Next, fill out [the bug report](ISSUE_TEMPLATE.md) template and submit your issue with as many details as possible including your operating system, your shell (if using something other than the default terminal), version of local-badges, version of node, version of npm, etc. (all of which is included in the template). If you find your issue has already been mentioned on [the issues page](https://github.com/nikita-skobov/local-badges/issues) but it is tagged as closed, feel free to open a new issue, and include the link to the closed issue somewhere in the additional information section.
+Next, fill out [the bug report](ISSUE_TEMPLATE.md) template, label it as *`BUG`* and submit your issue with as many details as possible including your operating system, your shell (if using something other than the default terminal), version of local-badges, version of node, version of npm, etc. (all of which is included in the template). If you find your issue has already been mentioned on [the issues page](https://github.com/nikita-skobov/local-badges/issues) but it is tagged as closed, feel free to open a new issue, and include the link to the closed issue somewhere in the additional information section.
 
 ## Suggesting Enhancements
 
@@ -62,4 +62,4 @@ I'm bad at writing documentation. If you want to make a pull request that adds, 
 
 ## Adding Badge Configurations
 
-Maybe you saw some example badge configurations in this repository, and you are thinking of adding your own here. I would love to see your badge configuration, but just not in this repository. This project is for creating badges from a customizable configuration. I want to avoid having a bunch of opinionated badge configurations directly in this repository. Instead, please feel free to make your own repository, and/or npm package of your desired badge configuration, and then file an issue and use the [badge config template](ISSUE_TEMPLATE.md) from the issue template file. Make sure to label it as: *BADGE-CONFIG*. As long as your badge config works with the current version of local-badges, and isn't offensive, I will add a link to your badge in the [available badge configurations file](BADGE_CONFIGURATIONS.md) for other users to use in their badge configurations.
+Maybe you saw some example badge configurations in this repository, and you are thinking of adding your own here. I would love to see your badge configuration, but just not in this repository. This project is for creating badges from a customizable configuration. I want to avoid having a bunch of opinionated badge configurations directly in this repository. Instead, please feel free to make your own repository, and/or npm package of your desired badge configuration, and then file an issue and use the [badge config template](ISSUE_TEMPLATE.md) from the issue template file. Make sure to label it as: *`BADGE-CONFIG`*. As long as your badge config works with the current version of local-badges, and isn't offensive, I will add a link to your badge in the [available badge configurations file](BADGE_CONFIGURATIONS.md) for other users to use in their badge configurations.
