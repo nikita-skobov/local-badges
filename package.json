@@ -1,6 +1,6 @@
 {
   "name": "local-badges",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a tool that generates badges locally from a customizable configuration file",
   "main": "index.js",
   "bin": {
