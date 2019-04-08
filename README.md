@@ -233,3 +233,10 @@ inactive: '#9f9f9f',
 ```
 
 These are the most common colors used in badges. If you want to use different color words, see [the colorWords.js file](./lib/constants/colorWords.js) for a full list.
+
+
+## Available badges
+
+local-badges is just a tool that generates badges from a configuration file. It does not come with any specific badge configurations. You can either make your own, or you can find some in the [list of available badges](BADGE_CONFIGURATIONS.md)
+
+If you would like to add your custom badge configuration to that list, please follow the directions in [the contribution guidelines](CONTRIBUTING.md) and I will be more than happy to add your badge to the list.
