@@ -3,23 +3,9 @@
 const { execSync } = require('child_process')
 const fs = require('fs')
 
-// const configModules = []
-// beforeAll(() => {
-//   const allFiles = fs.readdirSync('./configTests')
-//   allFiles.forEach((fname) => {
-//     const dotIndex = fname.indexOf('.')
-//     const numberOfCharsAfterDot = fname.length - dotIndex
-//     const extension = fname.substr(dotIndex, numberOfCharsAfterDot)
-//     console.log(extension)
-//     if (extension === '.js') {
-//       configModules.push(fname)
-//     }
-//   })
-// })
-
 describe('the config modules: ', () => {
   // get the name of all config modules in this directory
-  // make sure to only grab files that are js modules
+  // make sure to only grab files that are js modules, not .test.js
   const configModules = []
   const allFiles = fs.readdirSync('./configTests')
   allFiles.forEach((fname) => {
@@ -34,6 +20,12 @@ describe('the config modules: ', () => {
   const len = configModules.length
   for (let i = 0; i < len; i += 1) {
     const fname = configModules[i]
+    // for each configuration file, run the local-badges command
+    // on that config file, which causes badges to be generated in
+    // configTests/temp/**
+    // run snapshot test on every single badge from that directory,
+    // and then delete the directory recursively, and run the next
+    // test on the next configuration file.
     describe(`testing configuration file: ${fname}`, () => {
       beforeAll(() => {
         execSync(`node bin/local-badges.js --config configTests/${fname}`)
@@ -70,24 +62,4 @@ describe('the config modules: ', () => {
       })
     })
   }
-  // configModules.forEach((fname) => {
-  //   describe(`testing configuration file: ${fname}`, () => {
-  //     it('should be a string', () => {
-  //       expect(typeof fname).toBe('string')
-  //     })
-  //   })
-  // })
 })
-
-// beforeAll(() => {
-//   execSync('node bin/local-badges.js --config configTests/allTemplates.js')
-// })
-
-// afterAll(() => {
-//   execSync('rm -r ./configTests/temp/')
-// })
-
-// it('should create all the badges the same way every time', () => {
-//   const fileNames = fs.readdirSync('./configTests/temp/')
-//   expect(Array.isArray(fileNames)).toBe(true)
-// })
