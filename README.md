@@ -23,7 +23,7 @@ module.exports = {
   badges: [
     {
       name: 'my-badge', // required
-      folder: './', // required
+      folder: './badges', // optional, defaults to current working directory
       colorA: 'yellow', // optional, defaults to gray
       colorB: 'red', // optional, defaults to lightgray
       template: 'plastic', // optional, defaults to flat
@@ -33,7 +33,7 @@ module.exports = {
 }
 ```
 
-The above example will create a badge named my-badge.svg in the current working directory. It will look like this:
+The above example will create a badge named my-badge.svg in a new folder called badges. It will look like this:
 
 [![yellow-plastic-red](testFolder/yellow-red-plastic.svg)](testFolder/yellow-red-plastic.svg)
 
@@ -89,7 +89,6 @@ module.exports = {
       // this badge will be different depending on whether or not
       // you pass in a --successFlag option when running local-badges
       name: 'build-status',
-      folder: './',
       fn: (cliObj) => {
         const colorB = cliObj.successFlag ? 'green' : 'red'
         const passOrFail = cliObj.successFlag ? 'passing' : 'failing'
@@ -110,6 +109,7 @@ module.exports = {
   // eg: build-status
   defaults: {
     colorA: 'purple',
+    folder: './badges',
   },
 }
 ```
@@ -121,10 +121,11 @@ The first badge will be named `boring-badge.svg` and it will be placed in your c
   folder: './'
 }
 ```
-The second badge will be named `build-status.svg`, and will also be placed in your current working directory. the build-status badge has an extra property in the badge object called `fn`. `fn` is a function that takes a cli object that contains all the arguments passed in to local-badges. You can customize your badge configuration to depend on any argument you want other than `--config` because local-badges uses `--config` to find your configuration file.
+The second badge will be named `build-status.svg`, and this badge will be placed in a folder called badges because this badge object does not contain a folder property, therefore local-badges uses the defaults that are specified above. The build-status badge has an extra property in the badge object called `fn`. `fn` is a function that takes a cli object that contains all the arguments passed in to local-badges. You can customize your badge configuration to depend on any argument you want other than `--config` because local-badges uses `--config` to find your configuration file.
 
 ## Global defaults (as found in [lib/constants/defaults.js](./lib/constants/defaults.js)):
 - format: 'svg'
+- folder: './'
 - colorA: 'gray'
 - colorB: 'lightgray'
 - template: 'flat'
@@ -134,7 +135,7 @@ The second badge will be named `build-status.svg`, and will also be placed in yo
 
 ```js
 module.exports = {
-  defaults: { 
+  defaults: {
   // defaults: Object, optional. if no 'defaults' property is present
   // local-badges will use the global defaults
   // any defaults you specify here will override the global defaults.
@@ -177,6 +178,11 @@ text: (the text on the badge)
   - both element must be strings
   - if you want a badge that is a single color, you can make the first element be an empty string.
 
+folder: (the output folder of the badges)
+  - optional
+  - string
+  - defaults to current working directory
+
 ## valid badge object properties:
 
 All of the properties from the defaults object above can also be included in your badge object(s) to override the defaults specifically for that badge. In addition to the default properties, the badge object also takes the following properties:
@@ -185,10 +191,6 @@ name: (the name of the file to be output)
   - required
   - string
   - the format extension will be appended automatically
-
-folder: (the path or name of the folder where this badge will go)
-  - required
-  - string
 
 fn: (a function that gets invoked by the badgeRunner that lets you customize your badge dynamically via the inputs from the command line)
   - optional
