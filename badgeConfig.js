@@ -1,4 +1,4 @@
-const folder = './badges2'
+const folder = './badges'
 const fs = require('fs')
 
 function getMainMetricSnippet(str) {
