@@ -33,7 +33,7 @@ module.exports = {
 
 ## Adding your badge to the list
 
-I would love to see your custom badge configuration be added to the list below. All you need to do is make a seperate repository and/or npm package and put your badge configuration there. Your module should look something like this:
+I would love to see your custom badge configuration be added to the list above. All you need to do is make a seperate repository and/or npm package and put your badge configuration there. Your module should look something like this:
 ```js
 module.exports = {
   colorA: '...',
