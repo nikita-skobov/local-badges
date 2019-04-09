@@ -2,13 +2,13 @@
 
 ### Build Status badges
 
-* [buildStatus badge from nikitas-badges](https://www.npmjs.com/package/nikitas-badges)
+* [buildStatus badge from nikitas-badges](https://www.npmjs.com/package/nikitas-badges#buildstatus)
   * [![](https://raw.githubusercontent.com/nikita-skobov/nikitas-badges/8c09a3e5e7ff800c5ce00c38d96beab97a2ff36d/examples/buildStatus/passing.svg?sanitize=true)](https://raw.githubusercontent.com/nikita-skobov/nikitas-badges/8c09a3e5e7ff800c5ce00c38d96beab97a2ff36d/examples/buildStatus/passing.svg?sanitize=true)
   * [![](https://raw.githubusercontent.com/nikita-skobov/nikitas-badges/master/examples/buildStatus/failing.svg?sanitize=true)](https://raw.githubusercontent.com/nikita-skobov/nikitas-badges/master/examples/buildStatus/failing.svg?sanitize=true)
 
 ### Code Coverage badges
 
-* [cloverCoverage badge from nikitas-badges](https://www.npmjs.com/package/nikitas-badges)
+* [cloverCoverage badge from nikitas-badges](https://www.npmjs.com/package/nikitas-badges#clovercoverage)
   * [![](https://raw.githubusercontent.com/nikita-skobov/nikitas-badges/master/examples/cloverCoverage/coverage-high.svg?sanitize=true)](https://raw.githubusercontent.com/nikita-skobov/nikitas-badges/master/examples/cloverCoverage/coverage-high.svg?sanitize=true)
   * [![](https://raw.githubusercontent.com/nikita-skobov/nikitas-badges/master/examples/cloverCoverage/coverage-medium.svg?sanitize=true)](https://raw.githubusercontent.com/nikita-skobov/nikitas-badges/master/examples/cloverCoverage/coverage-medium.svg?sanitize=true)
   * [![](https://raw.githubusercontent.com/nikita-skobov/nikitas-badges/master/examples/cloverCoverage/coverage-low.svg?sanitize=true)](https://raw.githubusercontent.com/nikita-skobov/nikitas-badges/master/examples/cloverCoverage/coverage-low.svg?sanitize=true)
