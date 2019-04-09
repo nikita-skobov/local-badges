@@ -1,4 +1,4 @@
-const folder = './badges'
+const folder = './badges2'
 const fs = require('fs')
 
 function getMainMetricSnippet(str) {
@@ -27,12 +27,10 @@ module.exports = {
   badges: [
     {
       name: 'boring-default-badge',
-      folder,
     },
     {
       // I made this specifically for the jest clover.xml report
       name: 'coverage',
-      folder,
       fn: (cliObj) => {
         const coveragePath = cliObj['coverage-path']
         const cloverData = fs.readFileSync(coveragePath, { encoding: 'UTF-8' })
@@ -78,7 +76,6 @@ module.exports = {
     {
       // build status can just come from a flag
       name: 'build-status',
-      folder,
       fn: (cliObj) => {
         const returnObj = {
           text: ['build', 'failing'],
@@ -94,5 +91,6 @@ module.exports = {
   ],
   defaults: {
     colorA: 'grey',
+    folder,
   },
 }
