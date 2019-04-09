@@ -52,7 +52,8 @@ The general process for submitting pull requests should be as follows:
     - simply running `npm run test` will run all tests and tell you which (if any) tests failed. Go back and fix any of your code that caused the tests to fail.
     - I highly reccommend running the tests prior to starting to make any changes to ensure that all tests are passing. If for some reason they fail, please file a bug report.
     - If your code modifies the behavior of some of the existing functions, which causes the tests to fail, but you believe your functionality is more important, feel free to rewrite those tests adequately, and include in the pull request template that you have modified existing tests.
-4. If you have passed the checks mentioned above, proceed to [fill out the pull request template](PULL_REQUEST_TEMPLATE.md) and then post the pull request on github.
+4. Before posting the pull request, make sure to do a git pull of the latest version of THIS repositories master branch. See [this article](https://help.github.com/en/articles/configuring-a-remote-for-a-fork) to learn how to add a remote that points to THIS repository, and see [this article](https://help.github.com/en/articles/syncing-a-fork) for how to sync your fork with the latest version of this repository.
+5. If you have passed the checks mentioned above, proceed to [fill out the pull request template](PULL_REQUEST_TEMPLATE.md) and then post the pull request on github.
 
 
 ## Improving Documentation
